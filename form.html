@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang = "eng">
+
+
+    <head>
+        <title>Form Interaction</title>
+        <link rel="stylesheet" href="form-style.css">
+    </head>
+
+
+    <body>
+
+        <img src="controller.png" alt="image.png">
+
+        <p class="title company">Gamer</p>
+        <br>
+        <p class = "title">Registration Form</p>
+
+        <form method = "get">
+            Name:<br><input type = "text" placeholder="Jane Doe" required><br>
+            Email:<br><input type = "email" placeholder="email@email.com"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+            Password:<br><input type = "password" minlength="7" required><br>
+            <br>
+            <label for = "gender" class = "above-title">Gender:</label>
+            <br><input type = "radio" name = "gender" value ="1">Male<br>
+            <input type = "radio" name = "gender" value ="2">Female<br>
+            <input type = "radio" name = "gender" value ="3">Other<br>
+            <input type = "radio" name = "gender" value ="4">Do not want to say<br>
+
+
+            <br>
+            <label for = "Country">Country:</label>
+            <select name = "Country">
+                <optgroup label = "North America">
+                    <option>Canada</option>
+                    <option>United States</option>
+                    <option>Mexico</option>
+                </optgroup>
+                <optgroup label = "South America">
+                    <option>Argentina</option>
+                    <option>Bolivia</option>
+                    <option>Brazil</option>
+                    <option>Brazil</option>
+                    <option>Chile</option>
+                    <option>Colombia</option>
+                    <option>Ecuador</option>
+                    <option>Guyana</option>
+                    <option>Paraguay</option>
+                    <option>Peru</option>
+                    <option>Suriname</option>
+                    <option>Uruguay</option>
+                    <option>Venezuela</option>
+                </optgroup>
+            </select>
+
+
+            <br><br>
+            <label for = "terms" class = "above-title">Terms & Conditions</label><br>
+            <input type = "checkbox" id = "terms" name = "accept" required>I agree to the terms and conditions<br>
+            <input type = "checkbox" id = "terms">I do not accept<br>
+        </form>
+        <br>
+        <button>Submit</button>
+    </body>
+
+
+</html>

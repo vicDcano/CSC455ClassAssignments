@@ -1,14 +1,25 @@
+
+:root
+{
+    --padding-boxes: 2%;
+    --radius-boxes: 30px;
+    --fontsize-default: 18px;
+    --margin-horizontal: auto;
+    --reg-blue-shadow: 0px 4px 6px #385170;
+    --dark-blue-shadow: 0px 4px 6px #142d4c;
+    --border-solid: solid 2px #385170;
+}
+
 body
 {
     background-color: #9fd3c7;
-    font-family: Arial, sans-serif;
-    color: #385170;
-    display:flexbox;
+    font-family: 'Outfit','Oswald','Big Shoulders','Roboto';
     flex-direction: column;
     text-align: center;
-    margin: auto;
+    margin: var(--margin-horizontal);
     width: 50%;
     padding: 10px;
+    overflow-x: hidden;
 }
 
 p
@@ -18,15 +29,16 @@ p
 
 .title-name
 {
-    background-color: #142d4c;
+    font-family: 'Big Shoulders', 'Outfit','Oswald', 'Roboto';
+    background-color: #385170;
     margin-top: 0;
     color: #ececec;
-    box-shadow: 0px 4px 6px rgb(56, 81, 112);
+    box-shadow: var(--reg-blue-shadow);
     font-weight: 900;
     text-shadow: 0px 4px 6px #9fd3c7;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20rem;
+    margin-left: var(--margin-horizontal);
+    margin-right: var(--margin-horizontal);
+    border-radius: var(--radius-boxes);
 }
 
 .intro
@@ -46,13 +58,13 @@ img
     margin-left: auto;
     margin-right: auto;
     width: 25%;
-    box-shadow: 0px 4px 6px #142d4c;
+    box-shadow: var(--dark-blue-shadow);
 }
 
 nav
 {
     background-color: #385170;
-    box-shadow: 0px 4px 6px #142d4c;
+    box-shadow: var(--dark-blue-shadow);
     width: 15rem;
     margin-left: auto;
     margin-right: auto;
@@ -72,7 +84,9 @@ a
     font-style: italic;
     font-weight: 900;
     text-decoration: underline;
-    text-shadow: 0px 1px 8px #385170;
+    text-shadow: var(--reg-blue-shadow);
+    border-radius: var(--radius-boxes);
+    border: var(--border-solid);
 }
 
 ol
@@ -84,6 +98,8 @@ ol
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: var(--radius-boxes);
+    border: var(--border-solid);
 }
 
 li
@@ -97,6 +113,7 @@ div
     width: 25rem;
     margin-left: auto;
     margin-right: auto;
+    border-radius: var(--radius-boxes);
 }
 
 .blog-title
@@ -118,6 +135,7 @@ div
 iframe
 {
     box-shadow: 14px 14px 14px #385170;
+    border-radius: var(--radius-boxes);
 }
 
 footer
@@ -131,7 +149,5 @@ footer
     max-width: 100%;
     left: 0;
     width: 100%;
-    overflow-x: none;
-    margin-left: auto;
-    margin-right: auto;
+    margin: var(--margin-horizontal);
 }
