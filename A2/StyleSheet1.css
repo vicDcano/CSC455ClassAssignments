@@ -1,0 +1,72 @@
+﻿body /* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 20px;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #023e8a;
+    padding: 10px;
+}
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 15px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+        nav a:hover {
+            color: #ffdd57;
+        }
+
+/* Profile Image Styling */
+.profile-img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    width: 200px;
+    border: 5px solid #0077b6;
+}
+
+/* Section Styling */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings Styling */
+h2 {
+    color: #0077b6;
+    margin-top: 20px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+    footer a {
+        color: #ffdd57;
+        text-decoration: none;
+        font-weight: bold;
+    }

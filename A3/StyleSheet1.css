@@ -1,0 +1,110 @@
+﻿/* Step 1: Define CSS Variables for Consistency */
+:root {
+    --primary-color:red;
+    --secondary-color: #023e8a;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --accent-color: #ffdd57;
+    --font-main: 'Poppins', sans-serif;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Page Styling */
+body {
+    font-family: var(--font-main);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Step 4: Enhance Header with Gradient Background */
+header {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: var(--box-shadow);
+}
+
+/* Step 2: Implement Box Model Concepts */
+nav {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+        nav a:hover {
+            background: var(--accent-color);
+            color: black;
+        }
+
+/* Step 2: Apply Margins, Padding, and Borders */
+.profile-img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    width: 200px;
+    border: 5px solid var(--primary-color);
+    box-shadow: var(--box-shadow);
+}
+
+/* Step 2: Box Model for Sections */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Step 3: Improve Typography */
+h2 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* Paragraphs and Lists */
+p, ul, ol {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+/* Step 4: Enhance Footer */
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    box-shadow: var(--box-shadow);
+}
+
+    footer a {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        footer a:hover {
+            text-decoration: underline;
+        }

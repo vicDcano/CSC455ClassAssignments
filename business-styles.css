@@ -1,0 +1,135 @@
+body
+{
+    font: 'Oswald', 'Arvo';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #5585b5;
+}
+
+.card-container
+{
+    perspective: 1000px;
+}
+
+.business-card
+{
+    width: 300px;
+    height: 180px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s;
+    position: relative;
+    border-radius: 15px;
+    background: #53a8b6;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-container:hover .business-card
+{
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card-front
+{
+    background: #bbe4e9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-back
+{
+    background: #79c2d0;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+
+.card-front img
+{
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
+}
+
+.business-card
+{
+    border: 10px solid transparent;
+    animation: borderGlow 5s infinite alternate;
+}
+
+@keyframes borderGlow
+{
+    0%
+    {
+        border-color: #5585b5;
+        box-shadow: 0 0 30px #79c2d0;
+    }
+
+    50%
+    {
+        border-color: #5585b5;
+        box-shadow: 0 0 15px #79c2d0;
+    }
+
+    100%
+    {
+        border-color: #5585b5;
+        box-shadow: 0 0 10px #79c2d0;
+    }
+}
+
+.quick-box
+{
+    border: black;
+    padding: 8px;
+    background-color: #5585b5;
+    border-radius: 15px 50px 15px;
+}
+
+.occupation
+{
+    margin-top: -1rem;
+}
+
+.email
+{
+    margin-top: -0.5rem;
+}
+
+.phone
+{
+    margin-top: -1rem;
+}
+
+.name-front
+{
+    border: black;
+    background-color: #5585b5;
+    border-radius: 15px;
+}
+
+.bio
+{
+    margin-top: 0;
+}
+
+.traditional-vertical-writing
+{
+  writing-mode: vertical-rl;
+  color: aliceblue;
+}
