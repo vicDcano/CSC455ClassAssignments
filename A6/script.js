@@ -10,6 +10,11 @@ let draw_color = "black";
 let draw_width = "2";
 let is_drawing = false;
 
+function changeColor(element)
+{
+    draw_color = element.style.backgroundColor;
+}
+
 canvas.addEventListener("touchstart", start, false);
 canvas.addEventListener("touchmove", drawingCanvas, false);
 canvas.addEventListener("mousedown", start, false);
@@ -19,14 +24,15 @@ canvas.addEventListener("touchend", stop, false);
 canvas.addEventListener("mouseup", stop, false);
 canvas.addEventListener("mouseout", stop, false);
 
-const clear = document.getElementByClassName("clear_button");
-const save = document.getElementsByClassName("save_button");
+let save_button = document.getElementById("save");
+
+save_button.addEventListener("click", saveClick, false)
 
 function start(event)
 {
     is_drawing = true;
     draw.beginPath();
-    context.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+    draw.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
     event.preventDefault();
 }
 
@@ -39,9 +45,9 @@ function drawingCanvas(event)
         draw.lineWidth = draw_width;
 
         draw.lineCap = "round";
-
         draw.lineJoin = "round";
-        contex.stroke();
+
+        draw.stroke();
     }
 
     event.preventDefault();
@@ -59,12 +65,32 @@ function stop(event)
     event.preventDefault();
 }
 
-function ClearClick()
+function clearClick()
 {
     draw.clearRect(0, 0, canvas.width, canvas.height);
+    draw.fillStyle = "#fbf2d5";
+    draw.fillRect(0, 0, canvas.width, canvas.height);
+
 }
 
-function SaveDrawing()
+function saveClick()
 {
-    
+    /* const dataCanvas = canvas.toDataURL("image/png");
+    imgConverted.src = dataCanvas; */
+
+    if(window.navigator.msSaveBlob)
+    {
+        window.navigator.msSaveBlob(canvas.msToBlob(), "canvas-image.png");
+    }
+
+    else
+    {
+        const a = document.createElement("a");
+
+        document.body.appendChild(a);
+        a.href = canvas.toDataURL();
+        a.download = "canvas-image.png";
+        a.click();
+        document.body.removeChild(a);
+    }
 }

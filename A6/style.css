@@ -25,7 +25,8 @@ canvas
 {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    justify-content: center;
+    margin: 15px;
 }
 
 button
@@ -47,9 +48,26 @@ button
     border-radius: 15px;
     padding: 7px;
     width: 85px;
+    height: 35px;
     font-weight: bolder;
     font-size: 15px;
     cursor: pointer;
+    align-self: center;
+}
+
+.button_container .color-field
+{
+    height: 40px;
+    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
+    cursor: pointer;
+    display: inline;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid #fbf2d5;
+    align-self: center;
+    margin: 0 7px;
 }
 
 .slide_container
@@ -57,6 +75,7 @@ button
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 15px;
 }
 
 p
@@ -64,13 +83,27 @@ p
     margin-top: -5px;
 }
 
+.color-picker
+{
+    align-self: center;
+    margin: 0 15px;
+    height: 35px;
+}
+
 .save_button
 {
-    padding: auto;
+    width: 40px;
+    height: 40px;
+    padding: 0%;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
 }
 
 .floppy
 {
-    width: 25px;
-
+    width: 40px;
+    height: 40px;
 }

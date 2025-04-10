@@ -12,21 +12,29 @@
         <canvas id = "canvas"></canvas>
 
         <div class="button_container">
-            <button onclick = "ClearClick()" class = "clear_button">Clear</button>
+
+            <button onClick = "clearClick()" type = "button" class = "clear_button">Clear</button>
+
+            <div onClick = "changeColor(this)" class = "color-field" style = "background-color: blue;"></div>
+            <div onClick = "changeColor(this)" class = "color-field" style = "background-color: red;"></div>
+            <div onClick = "changeColor(this)" class = "color-field" style = "background-color: green;"></div>
+            <div onClick = "changeColor(this)" class = "color-field" style = "background-color: yellow;"></div>
 
             <div class = "slide_container">
-                <input type="range" min="1" max="100"class="slider" id="myRange">
+                <input onInput = "draw_width = this.value" type="range" min="1" max="100" class="slider">
                 <p>Thickness</p>
             </div>
 
+            <input onInput = "draw_color = this.value" type = "color" class = "color-picker">
+
             <div>
-                <button  onclick = "Save()" class = "save_button">
-                <img src = "floppy_disk.png" alt = "save" class = "floppy">
+                <button  onClick = "saveClick()" class = "save_button" id = "save">
+                    <img src = "floppy_disk.png" alt = "save button" class = "floppy">
                 </button>
             </div>
         </div>
 
-        <script src = "script.js"></script>
-
     </body>
+
+    <script src = "script.js"></script>
 </html>

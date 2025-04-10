@@ -1,7 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Delius&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 body
 {
+    font-family: 'Raleway', 'Delius', 'Cormorant Garamond';
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #955a47;
+    background-color: #ff6f3c;
+    transition: background-color 300ms ease-in-out;
+}
+
+h1
+{
+    color: #ffc93c;
+    margin-top: 55px;
+    margin-bottom: 35px;
+    text-shadow: 0 10px 10px #155263;
+    transition: color 200ms ease-out;
+}
+
+button
+{
+    font-family: 'Delius', 'Cormorant Garamond', "Raleway";
+    border-radius: 25px;
+    box-shadow: 0 10px 10px #ff9a3c;
+    padding: 15px;
+    color: #155263;
+    cursor: pointer;
+    border: #ffc93c 1px solid;
+}
+
+#happbtn
+{
+    background-color: #ffc93c;
+}
+
+#happbtn:active
+{
+    background-color: #fcd161;
+    padding: 15px;
+    font-size: 110%;
+}
+
+#sadbtn
+{
+    background-color: #2db8de;
+}
+
+#sadbtn:active
+{
+    background-color: #53d5f9;
+    padding: 15px;
+    font-size: 110%;
+}
+
+#madbtn
+{
+    background-color: #e35a28;
+}
+
+#madbtn:active
+{
+    background-color: #f85419;
+    padding: 15px;
+    font-size: 110%;
+}
+
+#surpbtn
+{
+    background-color: #f56ee1;
+}
+
+#surpbtn:active
+{
+    background-color: #f781e6;
+    padding: 15px;
+    font-size: 110%;
+}
+
+#clearbtn
+{
+    margin-top: 15px;
+    background-color: #155263;
+    color: #ffc93c;
+}
+
+#clearbtn:active
+{
+    background-color: transparent;
+}
+
+#message
+{
+    margin-top: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#message img
+{
+    margin-top: 15px;
+}
+
+.happy
+{
+    background-color: #ffc93c;
+}
+
+.sad
+{
+    background-color: #2db8de;
+}
+
+.mad
+{
+    background-color: #e35a28;
+}
+
+.surprise
+{
+    background-color: #f56ee1;
 }
