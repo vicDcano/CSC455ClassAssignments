@@ -1,0 +1,126 @@
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  
+}
+
+body
+{
+  background-color: #955a47;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  cursor: default;
+}
+
+form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #f0f0ef;
+  border-radius: 25px;
+  background-color: #f0f0ef;
+}
+
+.top-input
+{
+  box-shadow: 3px 10px 8px 0 #333;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #b1bd5d;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 5px;
+  box-shadow: 3px 10px 8px 0 #333;
+}
+
+button:hover {
+  background-color: #9ba651;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  background-color:  #edd690;
+  border-radius: 4px;
+  box-shadow: 3px 10px 8px 0 #333;
+}
+
+li.completed {
+  background-color: #f0f0f0;
+}
+
+.checkbox {
+  margin-left: -95px;
+  margin-right: -35px;
+  background-color: #f0f0ef;
+  cursor: pointer;
+}
+
+li span {
+  flex: 1;
+  cursor: pointer;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-actions {
+  display: flex;
+  margin-left: 10px;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #f0f0ef;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+button.delete {
+  background-color: #f44336;
+}
+
+button.delete:hover {
+  background-color: #d32f2f;
+}
+
+button.edit {
+  background-color: #2196F3;
+}
+
+button.edit:hover {
+  background-color: #0b7dda;
+}
+
+button.cancel {
+  background-color: #ff9800;
+}
+
+button.cancel:hover {
+  background-color: #e68a00;
+}
