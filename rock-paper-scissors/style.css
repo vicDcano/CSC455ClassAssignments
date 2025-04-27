@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&family=Stick&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 :root
 {
     --light-color: #dbd8e3;
@@ -14,27 +16,120 @@ body
     background-color: var(--darkest-color);
     color: var(--light-color);
     margin-top: 2rem;
+    font-family: 'Stick', 'Mystery Quest', 'Ubuntu';
+}
+
+label
+{
+    margin: 10px;
+    top: 5px;
+    height: 35px; /*The bar to make it horizontal switch values to make it vertical or horizontal*/
+    width: 90px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+label::after
+{
+    content: "";
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: 1.2px;
+    left: 0.85px;
+    background: linear-gradient(90deg, #ffcc89, #d8860b);
+    border-radius: 90px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    transition: 0.2s;
+}
+
+label svg
+{
+    position: absolute;
+    height: 30px; /* Changes the height between them*/
+    width: 30px; /* Changes the image size*/
+    left: 1.85px;
+    z-index: 5;
+}
+
+label svg.sun
+{
+  top: 1.5px;
+  fill:#fff;
+  transition: 0.3s;
+}
+
+label svg.moon
+{
+  top: 1.5px;
+  left: 58px;
+  fill: #7e7e7e;
+  transition: 0.3s;
+}
+
+input:checked + label svg.sun
+{
+  fill: #7e7e7e
+}
+
+input:checked + label svg.moon
+{
+  fill: #fff
+}
+
+input
+{
+  width: 0;
+  height: 0;
+  visibility: 0;
+  position: absolute;
+}
+
+input:checked + label
+{
+  background: #242424;
+}
+
+input:checked + label::after
+{
+  left: 88px;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, #777, #3a3a3a);
+}
+
+label:active::after
+{
+  width: 45px;
+
 }
 
 p
 {
     font-size: 30px;
     cursor: default;
+    font-family: 'Ubuntu', 'Stick', 'Mystery Quest';
 }
 
 button
 {
     border-radius: 25px;
     height: 45px;
-    width: 118px;
+    width: 100px;
     cursor: pointer;
     text-align: center;
     display: table-cell;
     vertical-align: middle;
-    background-color: transparent;
+    background-color: var(--darkest-color);
     margin-left: 15px;
     box-shadow: 0 3px 5px 1px var(--light-color);
     color: var(--light-color);
+    border: none;
+    font-family: 'Mystery Quest', 'Ubuntu', 'Stick';
 }
 
 .container
@@ -46,7 +141,7 @@ button
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 75px;
+    padding: 45px;
     background-color: var(--grey-color);
 }
 
@@ -59,5 +154,39 @@ button
 
 .buttons
 {
+    margin-top: 45px;
     margin-bottom: 35px;
+}
+
+.scoreboard
+{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    border: 5px dashed var(--darker-color);
+    background-color: var(--darkest-color);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.player-score
+{
+    margin-right: 5px;
+
+}
+
+.p-number
+{
+    margin-top: 45px;
+}
+
+.com-score
+{
+    margin-left: 5px;
+}
+
+.c-number
+{
+    margin-top: 45px;
+    padding-right: 10px;
 }
