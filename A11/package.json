@@ -1,0 +1,20 @@
+{
+  "name": "a11",
+  "version": "1.0.0",
+  "main": "a11.js",
+  "scripts": {
+    "devStart": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongodb": "^6.16.0",
+    "mongoose": "^8.14.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.5.0",
+    "nodemon": "^3.1.10"
+  }
+}
