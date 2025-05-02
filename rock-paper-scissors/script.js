@@ -73,7 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
 const resultText = document.querySelector(".result");
 const pchoice = document.querySelector(".player-choice");
 const comchoice = document.querySelector(".com-choice");
-const winnerSelected = document.querySelector(".results");
+const winnerSelected = document.querySelector(".round-winner");
+const linesDisplay = ['ROCK', 'PAPER', 'SCISSORS'];
 
 const playerScore = document.querySelector(".p-number");
 const comScore = document.querySelector(".c-number");
@@ -125,29 +126,31 @@ document.addEventListener("DOMContentLoaded", () => {
 function rockChoice()
 {
     const compPick = getRandomNum()
+    
 
     resultText.style.display = "flex";
-    pchoice.textContent = "You chose:...  ROCK\n";
+    resultText.style.flexDirection = "column";
+    pchoice.textContent = "You chose: ... " + linesDisplay[0];
 
     switch (compPick)
     {
         case 1:
-            comchoice.textContent = "Computer chose:... ROCK\n";
-            winnerSelected.textContent = "Result:.. \nIT'S A TIE!!!!\n";
+            comchoice.textContent = "Computer chose: ... " + linesDisplay[0];
+            winnerSelected.textContent = "Result: ... IT'S A TIE!!!!";
 
             break;
 
         case 2:
-            comchoice.textContent = "Computer chose:... PAPER\n";
-            winnerSelected.textContent = "Result:...\nYOU LOSE\n";
+            comchoice.textContent = "Computer chose: ... "+ linesDisplay[1];
+            winnerSelected.textContent = "Result: ...YOU LOSE";
 
             compNum++;
 
             break;
 
         case 3:
-            comchoice.textContent = "Computer chose:... SCISSORS\n";
-            winnerSelected.textContent = "Result:..\nYOU WIN";
+            comchoice.textContent = "Computer chose: ... " + linesDisplay[2];
+            winnerSelected.textContent = "Result: ... YOU WIN";
 
             pNum++;
 
@@ -162,26 +165,26 @@ function paperChoice()
     const compPick = getRandomNum()
 
     resultText.style.display = "flex";
-    pchoice.textContent = "You chose:...  PAPER\n";
+    pchoice.textContent = "You chose: ... " + linesDisplay[1];
 
     switch (compPick)
     {
         case 1:
-            comchoice.textContent = "Computer chose:... ROCK\n";
-            winnerSelected.textContent = "Result:..\nYOU WIN";
+            comchoice.textContent = "Computer chose: ... "+ linesDisplay[0];
+            winnerSelected.textContent = "Result: ... YOU WIN";
 
             pNum++;
             
             break;
 
         case 2:
-            comchoice.textContent = "Computer chose:... PAPER\n";
-            winnerSelected.textContent = "Result:.. \nIT'S A TIE!!!!\n";
+            comchoice.textContent = "Computer chose: ... "+ linesDisplay[1];
+            winnerSelected.textContent = "Result: ... IT'S A TIE!!!!";
             break;
 
         case 3:
-            comchoice.textContent = "Computer chose:... SCISSORS\n";
-            winnerSelected.textContent = "Result:...\nYOU LOSE\n";
+            comchoice.textContent = "Computer chose: ... "+ linesDisplay[2];
+            winnerSelected.textContent = "Result: ... YOU LOSE ";
 
             compNum++;
             
@@ -197,29 +200,29 @@ function scissorsChoice()
     const compPick = getRandomNum()
 
     resultText.style.display = "flex";
-    pchoice.textContent = "You chose:...  SCISSORS\n";
+    pchoice.textContent = "You chose: ... " + linesDisplay[2];
 
     switch (compPick)
     {
         case 1:
-            comchoice.textContent = "Computer chose:... ROCK\n";
-            winnerSelected.textContent = "Result:...\nYOU LOSE\n";
+            comchoice.textContent = "Computer chose: ... "+ linesDisplay[0];
+            winnerSelected.textContent = "Result: ... YOU LOSE";
 
             compNum++;
             
             break;
 
         case 2:
-            comchoice.textContent = "Computer chose:... PAPER\n";
-            winnerSelected.textContent = "Result:..\nYOU WIN";
+            comchoice.textContent = "Computer chose: ... "+ linesDisplay[1];
+            winnerSelected.textContent = "Result: ... YOU WIN";
 
             pNum++;
 
             break;
 
         case 3:
-            comchoice.textContent = "Computer chose:... SCISSORS\n";
-            winnerSelected.textContent = "Result:.. \nIT'S A TIE!!!!\n";
+            comchoice.textContent = "Computer chose: ... "+ linesDisplay[2];
+            winnerSelected.textContent = "Result: ... IT'S A TIE!!!!";
             
             break;
     }
